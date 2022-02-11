@@ -1,14 +1,20 @@
 package ua.ukrnet.page;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.nio.file.WatchEvent;
 import java.time.Duration;
+import java.util.ArrayList;
+
+import static ua.ukrnet.test.BaseTest.driver;
 
 public class MainPage extends BasePage{
     public WebDriver driver;
@@ -185,7 +191,75 @@ public class MainPage extends BasePage{
     }
 
 
+    /**
+     * search create new email link
+     */
+    @FindBy(xpath = "//*[text()='Створити скриньку']")
+    private WebElement createEmailLink;
 
+    public void clickEmailLink(){
+        createEmailLink.click();
+    }
+
+    /**
+     * search title 'Реєстрація поштової скриньки'
+     */
+    @FindBy(xpath = "//*[@class='header-title']")
+    private WebElement title;
+
+    /**
+     * method get text from title
+     */
+    public String getTextFromTitle() {
+        return title.getText();
+    }
+    /**
+     * method switch tabs
+     */
+    public void switchTab(){
+        ArrayList tabs = new ArrayList (driver.getWindowHandles());
+        driver.switchTo().window((String) tabs.get(1));
+    }
+
+    /**
+     * search 'Не вда'ється ввійти?' link
+     */
+    @FindBy(xpath = "//*[text()='Не вдається увійти?']")
+    private WebElement cannotLogInLink;
+
+    public void clickOnCannotLogInLink(){
+        cannotLogInLink.click();
+    }
+
+    /**
+     * search title 'Не вдається увійти?' link
+     */
+    @FindBy(xpath = "//*[@class='GbvW5ssD']")
+    private WebElement titleCannotLogIn;
+
+    public String getTitleCannotLogIn(){
+        return titleCannotLogIn.getText();
+    }
+
+    /**
+     * search 'Пошта' link
+     */
+    @FindBy(xpath = "//*[@class='form__mail-link']")
+    private WebElement emailLink;
+
+    public void clickOnEmailLink(){
+        emailLink.click();
+    }
+
+    /**
+     * search title 'Пошта' link
+     */
+    @FindBy(xpath = "//*[@class='_1azB1YgZ']")
+    private WebElement titleEmail;
+
+    public String getTitleEmailLink(){
+        return titleEmail.getText();
+    }
 
 
 

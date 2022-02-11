@@ -9,8 +9,4 @@ public abstract class BasePage {
         return element.getText().equals("");
     }
 
-    //    @FindBy(name = "header")
-//    private WebElement header;
-//
-
 }

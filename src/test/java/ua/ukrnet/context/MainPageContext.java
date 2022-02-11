@@ -1,10 +1,13 @@
 package ua.ukrnet.context;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import ua.ukrnet.page.MainPage;
 import ua.ukrnet.test.BaseTest;
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 import static ua.ukrnet.test.BaseTest.driver;
 
@@ -110,6 +113,52 @@ public class MainPageContext {
         clear();
         return mainPage.finMaxCharactersPassword();
     }
+
+    /**
+     * get text from 'Реєстрація поштової скриньки' title
+     */
+    public static String getTextFromEmailTitle() {
+        mainPage.clickEmailLink();
+        mainPage.switchTab();
+        return mainPage.getTextFromTitle();
+    }
+    /**
+     * get URL after click on
+     */
+    public static String getURLFromEmailLink(){
+        return driver.getCurrentUrl();
+    }
+
+    /**
+     * get text from 'Не вдається увійти?' title
+     */
+    public static String getTextFromCannotLogInTitle(){
+        mainPage.clickOnCannotLogInLink();
+        mainPage.switchTab();
+        return mainPage.getTitleCannotLogIn();
+    }
+
+    public static String getURLFromCannotLogInLink(){
+        return driver.getCurrentUrl();
+    }
+
+    /**
+     * get text from 'Пошта' title
+     */
+    public static String getTextFromEmailLinkTitle(){
+        mainPage.clickOnEmailLink();
+        mainPage.switchTab();
+        return mainPage.getTitleEmailLink();
+    }
+
+    public static String getURLFromAllEmailLink(){
+        return driver.getCurrentUrl();
+    }
+
+
+
+
+
 
 
 }

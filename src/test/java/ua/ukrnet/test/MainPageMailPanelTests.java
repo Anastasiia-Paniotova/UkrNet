@@ -1,6 +1,7 @@
 package ua.ukrnet.test;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import ua.ukrnet.context.MainPageContext;
 import ua.ukrnet.page.MainPage;
 import org.testng.Assert;
@@ -23,42 +24,60 @@ public class MainPageMailPanelTests extends BaseTest {
 
     }
     @Test
-    public void loginByInvalidValues() {
+    public void loginByInvalidEmail() {
         driver.switchTo().frame("mail widget");
-        String login = "anastasiia.paniotova@ukr.net";
+
         String password = "135//79";
-
         String invalidLogin = "invalid@ukr.net";
-        String invalidPassword = "invalid";
-
         String expectedMessage = "Неправильні дані";
 
         MainPageContext.login(invalidLogin, password);
-        assertThat(MainPageContext.getTextInvalidEmail(), anyOf(containsString(expectedMessage)));
+        assertThat(MainPageContext.getTextInvalidEmail(), containsString(expectedMessage));
 
-        MainPageContext.clear();
+    }
+
+    @Test
+    public void loginByInvalidPassword(){
+        driver.switchTo().frame("mail widget");
+        String login = "anastasiia.paniotova@ukr.net";
+        String invalidPassword = "invalid";
+        String expectedMessage = "Неправильні дані";
+
         MainPageContext.login(login,invalidPassword);
-        assertThat(MainPageContext.getTextInvalidEmail(), anyOf(containsString(expectedMessage)));
-
+        assertThat(MainPageContext.getTextInvalidEmail(), containsString(expectedMessage));
     }
 
     @Test
     public void leaveEmptyFields() {
         driver.switchTo().frame("mail widget");
-        String login = "anastasiia.paniotova@ukr.net";
-        String password = "135//79";
-        String expectedMessage = "Поле має бути заповнене";
+
         String expectedMessageEmptyFields = "Поля мають бути заповнені";
 
         assertThat(MainPageContext.loginByEmptyFields(),containsString(expectedMessageEmptyFields));
-        MainPageContext.clear();
+
+    }
+
+    @Test
+    public void leaveEmptyLoginField() {
+        driver.switchTo().frame("mail widget");
+
+        String password = "135//79";
+        String expectedMessage = "Поле має бути заповнене";
 
         MainPageContext.loginWithEmptyEmail(password);
         assertThat(MainPageContext.loginByEmptyEmail(),containsString(expectedMessage));
-        MainPageContext.clear();
+    }
+
+    @Test
+    public void leaveEmptyPasswordField() {
+        driver.switchTo().frame("mail widget");
+
+        String login = "anastasiia.paniotova@ukr.net";
+        String expectedMessage = "Поле має бути заповнене";
 
         MainPageContext.loginWithEmptyPassword(login);
         assertThat(MainPageContext.loginByEmptyPassword(),containsString(expectedMessage));
+
     }
 
     @Test
@@ -76,6 +95,45 @@ public class MainPageMailPanelTests extends BaseTest {
 
         assertThat(MainPageContext.findMaxCharactersLoginField(),equalTo(maxLogin));
         assertThat(MainPageContext.findMaxCharactersPasswordField(),equalTo(maxPassword));
+    }
+
+    @Test
+    public void navigateUponClickCreateEmail(){
+        driver.switchTo().frame("mail widget");
+        String title = "Реєстрація поштової скриньки";
+        String URL = "https://accounts.ukr.net/registration?client_id=9TFMHJACHt5KxBm2sQWS&lang=uk";
+
+        assertThat(MainPageContext.getTextFromEmailTitle(),equalTo(title));
+        assertThat(MainPageContext.getURLFromEmailLink(),equalTo(URL));
 
     }
+
+    @Test
+    public void navigateUponClickCannotLogIn(){
+        driver.switchTo().frame("mail widget");
+        String title = "Відновлення доступу";
+        String URL = "https://accounts.ukr.net/recovery?client_id=9TFMHJACHt5KxBm2sQWS&lang=uk";
+
+        assertThat(MainPageContext.getTextFromCannotLogInTitle(),equalTo(title));
+        assertThat(MainPageContext.getURLFromCannotLogInLink(),equalTo(URL));
+    }
+
+    @Test
+    public void navigateUponClickEmailLink(){
+        driver.switchTo().frame("mail widget");
+        String title = "Пошта";
+        String URL = "https://accounts.ukr.net/login?client_id=9GLooZH9KjbBlWnuLkVX";
+
+        assertThat(MainPageContext.getTextFromEmailLinkTitle(),equalTo(title));
+        assertThat(MainPageContext.getURLFromAllEmailLink(),equalTo(URL));
+
+
+    }
+
+
+
+
+
+
+
 }
