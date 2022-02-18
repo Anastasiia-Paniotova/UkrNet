@@ -1,53 +1,49 @@
-package ua.ukrnet.test;
+package test.java.ua.ukrnet.test;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import ua.ukrnet.context.MainPageContext;
-import ua.ukrnet.page.MainPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
+import test.java.ua.ukrnet.configuration.DataProperties;
+import test.java.ua.ukrnet.context.MainPageContext;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
 
 public class MainPageMailPanelTests extends BaseTest {
-    @Test
+    @Test(groups = {"mail-panel"})
     public void loginEmail() {
         driver.switchTo().frame("mail widget");
-        String login = "anastasiia.paniotova@ukr.net";
-        String password = "135//79.";
+        String login = DataProperties.getProperty("validEmail");
+        String password = DataProperties.getProperty("validPassword");
 
         MainPageContext.login(login, password);
-        assertThat(MainPageContext.getTextValidEmail(), anyOf(containsString(login)));
+        assertThat(MainPageContext.getTextValidEmail(), containsString(login));
 
     }
-    @Test
+    @Test (groups = {"mail-panel"})
     public void loginByInvalidEmail() {
         driver.switchTo().frame("mail widget");
 
-        String password = "135//79";
-        String invalidLogin = "invalid@ukr.net";
+        String password = DataProperties.getProperty("validPassword");
+        String invalidLogin = DataProperties.getProperty("invalidEmail");
         String expectedMessage = "Неправильні дані";
 
         MainPageContext.login(invalidLogin, password);
         assertThat(MainPageContext.getTextInvalidEmail(), containsString(expectedMessage));
-
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void loginByInvalidPassword(){
         driver.switchTo().frame("mail widget");
-        String login = "anastasiia.paniotova@ukr.net";
-        String invalidPassword = "invalid";
+        String login = DataProperties.getProperty("validEmail");
+        String invalidPassword = DataProperties.getProperty("invalidPassword");
         String expectedMessage = "Неправильні дані";
 
         MainPageContext.login(login,invalidPassword);
         assertThat(MainPageContext.getTextInvalidEmail(), containsString(expectedMessage));
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void leaveEmptyFields() {
         driver.switchTo().frame("mail widget");
 
@@ -57,22 +53,24 @@ public class MainPageMailPanelTests extends BaseTest {
 
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void leaveEmptyLoginField() {
+
         driver.switchTo().frame("mail widget");
 
-        String password = "135//79";
+        String password = DataProperties.getProperty("validPassword");
         String expectedMessage = "Поле має бути заповнене";
 
         MainPageContext.loginWithEmptyEmail(password);
         assertThat(MainPageContext.loginByEmptyEmail(),containsString(expectedMessage));
+
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void leaveEmptyPasswordField() {
         driver.switchTo().frame("mail widget");
 
-        String login = "anastasiia.paniotova@ukr.net";
+        String login = DataProperties.getProperty("validEmail");
         String expectedMessage = "Поле має бути заповнене";
 
         MainPageContext.loginWithEmptyPassword(login);
@@ -80,60 +78,65 @@ public class MainPageMailPanelTests extends BaseTest {
 
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void navigateFromLogoToMainPage() {
-        String expectedURL = "https://www.ukr.net/";
+        String expectedURL = DataProperties.getProperty("expectedURL");
 
         assertThat(MainPageContext.navigateByClickingLogo(),equalTo(expectedURL));
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void checkValidationMaxCharacters() {
         driver.switchTo().frame("mail widget");
-        String maxLogin = "32";
-        String maxPassword = "128";
+        String maxLogin = DataProperties.getProperty("maxLogin");
+        String maxPassword = DataProperties.getProperty("maxPassword");
 
         assertThat(MainPageContext.findMaxCharactersLoginField(),equalTo(maxLogin));
         assertThat(MainPageContext.findMaxCharactersPasswordField(),equalTo(maxPassword));
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void navigateUponClickCreateEmail(){
         driver.switchTo().frame("mail widget");
         String title = "Реєстрація поштової скриньки";
-        String URL = "https://accounts.ukr.net/registration?client_id=9TFMHJACHt5KxBm2sQWS&lang=uk";
+        String URL = DataProperties.getProperty("accountURL");
 
         assertThat(MainPageContext.getTextFromEmailTitle(),equalTo(title));
         assertThat(MainPageContext.getURLFromEmailLink(),equalTo(URL));
 
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void navigateUponClickCannotLogIn(){
         driver.switchTo().frame("mail widget");
         String title = "Відновлення доступу";
-        String URL = "https://accounts.ukr.net/recovery?client_id=9TFMHJACHt5KxBm2sQWS&lang=uk";
+        String URL = DataProperties.getProperty("accessURL");
 
         assertThat(MainPageContext.getTextFromCannotLogInTitle(),equalTo(title));
         assertThat(MainPageContext.getURLFromCannotLogInLink(),equalTo(URL));
     }
 
-    @Test
+    @Test (groups = {"mail-panel"})
     public void navigateUponClickEmailLink(){
         driver.switchTo().frame("mail widget");
         String title = "Пошта";
-        String URL = "https://accounts.ukr.net/login?client_id=9GLooZH9KjbBlWnuLkVX";
+        String URL = DataProperties.getProperty("emailURL");
 
         assertThat(MainPageContext.getTextFromEmailLinkTitle(),equalTo(title));
         assertThat(MainPageContext.getURLFromAllEmailLink(),equalTo(URL));
-
-
     }
+    @Test (groups = {"mail-panel"})
+    public void logOut(){
+        driver.switchTo().frame("mail widget");
+        String login = DataProperties.getProperty("validEmail");
+        String password = DataProperties.getProperty("validPassword");
 
+        MainPageContext.login(login, password);
+        assertThat(MainPageContext.getTextValidEmail(), containsString(login));
 
-
-
-
-
-
+        Assert.assertTrue(MainPageContext.checkLogOut());
+    }
+    /**
+     * 12 tests
+     */
 }

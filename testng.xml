@@ -1,0 +1,16 @@
+<suite name="Main Page" verbose="1">
+    <test name="Group of main page">
+        <groups>
+            <define name="include-group">
+                <include name="mail-panel" />
+            </define>
+
+            <run>
+                <include name="mail-panel" />
+            </run>
+        </groups>
+        <classes>
+            <class name="test.java.ua.ukrnet.test.MainPageMailPanelTests"/>
+        </classes>
+    </test>
+</suite>

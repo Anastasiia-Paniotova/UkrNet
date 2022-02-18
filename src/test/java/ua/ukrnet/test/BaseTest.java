@@ -1,16 +1,17 @@
-package ua.ukrnet.test;
-import ua.ukrnet.configuration.ConfProperties;
+package test.java.ua.ukrnet.test;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import test.java.ua.ukrnet.configuration.ConfProperties;
 
 import java.time.Duration;
 
 public abstract class BaseTest {
     public static WebDriver driver;
 
-    @BeforeClass
+    @BeforeMethod(alwaysRun = true)
     public static void setup() {
         //определение пути до драйвера и его настройка
         //System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
@@ -24,9 +25,11 @@ public abstract class BaseTest {
         //получение ссылки на страницу входа из файла настроек
         driver.get(ConfProperties.getProperty("homePage"));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+
     }
 
-    @AfterClass
+
+    @AfterClass(alwaysRun = true)
     public void tearDown(){
         driver.quit();
     }

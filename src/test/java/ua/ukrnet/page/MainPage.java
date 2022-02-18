@@ -1,22 +1,18 @@
-package ua.ukrnet.page;
+package test.java.ua.ukrnet.page;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.nio.file.WatchEvent;
 import java.time.Duration;
 import java.util.ArrayList;
 
-import static ua.ukrnet.test.BaseTest.driver;
 
-public class MainPage extends BasePage{
+public class MainPage extends BasePage {
     public WebDriver driver;
     private WebDriverWait wait;
 
@@ -100,7 +96,6 @@ public class MainPage extends BasePage{
 
     /**
      * method get text from user email
-     * @return
      */
     public String getTextUserEmail(){
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("id-user-email")));
@@ -121,6 +116,7 @@ public class MainPage extends BasePage{
         return errorMessage.getText();
     }
 
+
     /**
      * error message upon empty fields
      */
@@ -131,7 +127,7 @@ public class MainPage extends BasePage{
      * method get Error Message upon empty fields
      */
     public String getTextErrorMessageEmptyFields() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='form__error form__error_emptyBoth form__error_visible']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='form__error form__error_emptyBoth form__error_visible']")));
         return errorMessageEmptyFields.getText();
     }
 
@@ -261,7 +257,20 @@ public class MainPage extends BasePage{
         return titleEmail.getText();
     }
 
+    /**
+     * search 'Вийти' link
+     */
+    @FindBy(xpath = "//*[@id='id-logout']")
+    private WebElement logOut;
 
-
-
+    public void clickLogOut(){
+        logOut.click();
+    }
+    /**
+     * method switch tab
+     */
+    public void switchWindow(){
+        String window = driver.getWindowHandle();
+        driver.switchTo().window(window);
+    }
 }
