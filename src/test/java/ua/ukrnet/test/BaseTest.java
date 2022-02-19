@@ -3,7 +3,7 @@ package test.java.ua.ukrnet.test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import test.java.ua.ukrnet.configuration.ConfProperties;
 
 import java.time.Duration;
@@ -11,11 +11,12 @@ import java.time.Duration;
 public abstract class BaseTest {
     public static WebDriver driver;
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeClass(alwaysRun = true)
     public static void setup() {
         //определение пути до драйвера и его настройка
         //System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromedriver"));
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Professional\\Desktop\\UkrNet\\chrome_webdriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",
+                "C:\\Users\\Professional\\Desktop\\UkrNet\\chrome_webdriver\\chromedriver.exe");
         //создание экземпляра драйвера
         driver = new ChromeDriver();
         //окно разворачивается на полный экран
@@ -24,10 +25,8 @@ public abstract class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //получение ссылки на страницу входа из файла настроек
         driver.get(ConfProperties.getProperty("homePage"));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
     }
-
 
     @AfterClass(alwaysRun = true)
     public void tearDown(){

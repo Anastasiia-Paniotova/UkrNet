@@ -1,0 +1,16 @@
+<suite name="Message List Page" verbose="1">
+    <test name="Group of Message List Page">
+        <groups>
+            <define name="include-group">
+                <include name="msg-list" />
+            </define>
+
+            <run>
+                <include name="msg-list" />
+            </run>
+        </groups>
+        <classes>
+            <class name="test.java.ua.ukrnet.test.MsgListPageTests"/>
+        </classes>
+    </test>
+</suite>

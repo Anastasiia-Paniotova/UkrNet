@@ -1,6 +1,7 @@
 package test.java.ua.ukrnet.test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import test.java.ua.ukrnet.configuration.DataProperties;
@@ -14,7 +15,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class MsgListPageTests extends BaseTest{
-    @BeforeMethod
+
+    @BeforeClass(alwaysRun = true)
     public static void setUpLogin(){
         driver.switchTo().frame("mail widget");
         String login = DataProperties.getProperty("validEmail");
@@ -25,13 +27,18 @@ public class MsgListPageTests extends BaseTest{
         MsgListPageContext.navigateMessageListLink();
     }
 
-    @Test
+    @BeforeMethod(alwaysRun = true)
+        public static void openMsgListPage(){
+            driver.get("https://mail.ukr.net/desktop");
+        }
+
+    @Test(groups = "msg-list")
     public void checkURL() {
-        String expectedURL = "https://mail.ukr.net/desktop#msglist/f0/p0";
-        assertThat(MsgListPageContext.getURL(),equalTo(expectedURL));
+        String expectedURL = "https://mail.ukr.net/desktop";
+        assertThat(MsgListPageContext.getURL(),containsString(expectedURL));
     }
 
-    @Test
+    @Test(groups = "msg-list")
     public void checkComponents(){
         String componentCount = "8";
         ArrayList<String> titles =new ArrayList<>(Arrays.asList
@@ -41,7 +48,7 @@ public class MsgListPageTests extends BaseTest{
         assertThat(MsgListPageContext.getListOfTitles(),equalTo(titles));
     }
 
-    @Test
+    @Test(groups = "msg-list")
     public void cancelTheLetter(){
         MsgListPageContext.clickSendLetter();
         Assert.assertTrue(MsgListPageContext.isDisplayedScreenContent());
@@ -50,7 +57,7 @@ public class MsgListPageTests extends BaseTest{
         Assert.assertFalse(MsgListPageContext.isNotDisplayedScreenContent());
     }
 
-    @Test
+    @Test(groups = "msg-list", priority = 1)
     public void sendTheLetterAndVerify() {
         String recipient = DataProperties.getProperty("recipient");
         String subject = DataProperties.getProperty("subject");
@@ -62,7 +69,7 @@ public class MsgListPageTests extends BaseTest{
         assertThat(MsgListPageContext.getSubjectDataSentLetter(),equalTo(subject));
     }
 
-    @Test
+    @Test(groups = "msg-list")
     public void getAlertSendTheLetterWithoutRecipient(){
         String subject = DataProperties.getProperty("subject");
         String alert = "Потрібно вказати хоча б одного отримувача в полі 'Кому'";
@@ -71,7 +78,7 @@ public class MsgListPageTests extends BaseTest{
         assertThat(MsgListPageContext.getAlertWithoutRecipientText(),containsString(alert));
     }
 
-    @Test
+    @Test(groups = "msg-list")
     public void sendLetterWithoutRecipient(){
         String subject = DataProperties.getProperty("subject");
 
@@ -81,9 +88,10 @@ public class MsgListPageTests extends BaseTest{
         assertThat(MsgListPageContext.getSubjectFromDrafts(),equalTo(subject));
     }
 
-    @Test
+    @Test(groups = "msg-list",priority = 2)
     public void sendLetterWithoutSubject(){
         String recipient = DataProperties.getProperty("recipient");
+
         String alertTitle = "Увага";
         String alertTopic = "Тема листа не вказана";
         String alertList = "Порожній лист";
@@ -95,7 +103,7 @@ public class MsgListPageTests extends BaseTest{
 
     }
 
-    @Test
+    @Test(groups = "msg-list")
     public void checkRightSideComponents(){
         String contacts = "Контакти";
         String groups = "Групи";
@@ -109,7 +117,7 @@ public class MsgListPageTests extends BaseTest{
         assertThat(MsgListPageContext.getTypeGroups(),equalTo(type));
     }
 
-    @Test
+    @Test(groups = "msg-list")
     public void isDisabledHeaderOptionsByDefault(){
         Assert.assertTrue(MsgListPageContext.isDisableForward());
         Assert.assertTrue(MsgListPageContext.isDisableRemove());
@@ -119,7 +127,7 @@ public class MsgListPageTests extends BaseTest{
     }
 
 
-    @Test
+    @Test(groups = "msg-list")
     public void isEnabledHeaderOptions(){
         String recipient = DataProperties.getProperty("recipient");
         String subject = DataProperties.getProperty("subject");

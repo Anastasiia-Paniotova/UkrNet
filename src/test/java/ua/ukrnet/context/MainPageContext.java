@@ -19,7 +19,6 @@ public class MainPageContext {
             mainPage.inputPassword(password);
             mainPage.submitLogin();
         }
-        log.info("login is finished");
     }
 
     /**
@@ -36,6 +35,7 @@ public class MainPageContext {
      * verification that user's email is displayed
      */
     public static String getTextValidEmail() {
+        log.info("text of user email - " + mainPage.getTextUserEmail());
         return mainPage.getTextUserEmail();
     }
 
@@ -43,6 +43,7 @@ public class MainPageContext {
      * get error message upon failed login
      */
     public static String getTextInvalidEmail() {
+        log.info("text of error message - " + mainPage.getTextErrorMessage());
         return mainPage.getTextErrorMessage();
     }
 
@@ -73,6 +74,7 @@ public class MainPageContext {
      * get error message upon entering empty login
      */
     public static String loginByEmptyEmail() {
+        log.info("error message - " + mainPage.getTextErrorMessageEmptyLogin());
         return mainPage.getTextErrorMessageEmptyLogin();
         }
 
@@ -92,6 +94,7 @@ public class MainPageContext {
      * get error message upon entering empty password
      */
     public static String loginByEmptyPassword() {
+        log.info("error message - " + mainPage.getTextErrorMessageEmptyPassword());
         return mainPage.getTextErrorMessageEmptyPassword();
     }
 
@@ -135,6 +138,7 @@ public class MainPageContext {
      * get URL after click on Email link
      */
     public static String getURLFromEmailLink(){
+        log.info("the current URL is " + driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
 
@@ -149,6 +153,7 @@ public class MainPageContext {
     }
 
     public static String getURLFromCannotLogInLink(){
+        log.info("the current URL is " + driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
 
@@ -163,6 +168,7 @@ public class MainPageContext {
     }
 
     public static String getURLFromAllEmailLink(){
+        log.info("the current URL is " + driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
 
@@ -176,14 +182,6 @@ public class MainPageContext {
         driver.switchTo().frame("mail widget");
         return mainPage.inputPasswordIsClear() && mainPage.inputLoginIsClear();
     }
-
-
-
-
-
-
-
-
 }
 
 

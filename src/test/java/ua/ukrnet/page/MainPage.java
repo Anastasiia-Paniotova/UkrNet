@@ -214,6 +214,9 @@ public class MainPage extends BasePage {
      */
     public void switchTab(){
         ArrayList tabs = new ArrayList (driver.getWindowHandles());
+        if (tabs.size() > 1) {
+            driver.close();
+        }
         driver.switchTo().window((String) tabs.get(1));
     }
 
