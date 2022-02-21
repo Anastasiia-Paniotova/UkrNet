@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 9 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Main_Page" class="navigator-link">
+              <span class="suite-name border-failed">Main Page</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Main_Page" class="navigator-link ">
+                    <span>C:\Users\Professional\Desktop\UkrNet\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Main_Page" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Main_Page" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Main_Page" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Main_Page" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Main_Page" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Main_Page" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">12 methods, 9 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Main_Page" class="hide-methods failed suite-Main_Page"> (hide)</a> <!-- hide-methods failed suite-Main_Page -->
+                      <a href="#" panel-name="suite-Main_Page" class="show-methods failed suite-Main_Page"> (show)</a> <!-- show-methods failed suite-Main_Page -->
+                    </span>
+                    <div class="method-list-content failed suite-Main_Page">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="leaveEmptyFields">leaveEmptyFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="leaveEmptyLoginField">leaveEmptyLoginField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="leaveEmptyPasswordField">leaveEmptyPasswordField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="loginByInvalidEmail">loginByInvalidEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="loginByInvalidPassword">loginByInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="navigateFromLogoToMainPage">navigateFromLogoToMainPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="navigateUponClickCannotLogIn">navigateUponClickCannotLogIn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="navigateUponClickCreateEmail">navigateUponClickCreateEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="navigateUponClickEmailLink">navigateUponClickEmailLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Main_Page -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Main_Page" class="hide-methods passed suite-Main_Page"> (hide)</a> <!-- hide-methods passed suite-Main_Page -->
+                      <a href="#" panel-name="suite-Main_Page" class="show-methods passed suite-Main_Page"> (show)</a> <!-- show-methods passed suite-Main_Page -->
+                    </span>
+                    <div class="method-list-content passed suite-Main_Page">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="checkValidationMaxCharacters">checkValidationMaxCharacters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="logOut">logOut</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Main_Page" title="test.java.ua.ukrnet.test.MainPageMailPanelTests" class="method navigator-link" hash-for-method="loginEmail">loginEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Main_Page -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Main_Page" class="panel Main_Page">
+          <div class="suite-Main_Page-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">test.java.ua.ukrnet.test.MainPageMailPanelTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="leaveEmptyFields">
+                  </a> <!-- leaveEmptyFields -->
+                  <span class="method-name">leaveEmptyFields</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+Expected: a string containing &quot;РџРѕР»СЏ РјР°СЋС‚СЊ Р±СѓС‚Рё Р·Р°РїРѕРІРЅРµРЅС–&quot;
+     but: was &quot;Поля мають бути заповнені&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.leaveEmptyFields(MainPageMailPanelTests.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="leaveEmptyLoginField">
+                  </a> <!-- leaveEmptyLoginField -->
+                  <span class="method-name">leaveEmptyLoginField</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+Expected: a string containing &quot;РџРѕР»Рµ РјР°С” Р±СѓС‚Рё Р·Р°РїРѕРІРЅРµРЅРµ&quot;
+     but: was &quot;Поле має бути заповнене&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.leaveEmptyLoginField(MainPageMailPanelTests.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="leaveEmptyPasswordField">
+                  </a> <!-- leaveEmptyPasswordField -->
+                  <span class="method-name">leaveEmptyPasswordField</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+Expected: a string containing &quot;РџРѕР»Рµ РјР°С” Р±СѓС‚Рё Р·Р°РїРѕРІРЅРµРЅРµ&quot;
+     but: was &quot;Поле має бути заповнене&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.leaveEmptyPasswordField(MainPageMailPanelTests.java:91)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginByInvalidEmail">
+                  </a> <!-- loginByInvalidEmail -->
+                  <span class="method-name">loginByInvalidEmail</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@class=&apos;form__error form__error_wrong form__error_visible&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at test.java.ua.ukrnet.page.MainPage.getTextErrorMessage(MainPage.java:115)
+	at test.java.ua.ukrnet.context.MainPageContext.getTextInvalidEmail(MainPageContext.java:46)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.loginByInvalidEmail(MainPageMailPanelTests.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;form__error form__error_wrong form__error_visible&apos;]&quot;}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;USER-PC&apos;, ip: &apos;172.18.176.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73d937ecbe29588d6bbee990507c8485, findElement {using=xpath, value=//*[@class=&apos;form__error form__error_wrong form__error_visible&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PROFES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58105/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d937ecbe29588d6bbee990507c8485
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:174)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 40 more
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginByInvalidPassword">
+                  </a> <!-- loginByInvalidPassword -->
+                  <span class="method-name">loginByInvalidPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+Expected: a string containing &quot;РќРµРїСЂР°РІРёР»СЊРЅС– РґР°РЅС–&quot;
+     but: was &quot;Неправильні дані&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.loginByInvalidPassword(MainPageMailPanelTests.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigateFromLogoToMainPage">
+                  </a> <!-- navigateFromLogoToMainPage -->
+                  <span class="method-name">navigateFromLogoToMainPage</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//img[@alt=&apos;РЅРѕРІРёРЅРё&apos;]&quot;}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;USER-PC&apos;, ip: &apos;172.18.176.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73d937ecbe29588d6bbee990507c8485, findElement {using=xpath, value=//img[@alt=&apos;РЅРѕРІРёРЅРё&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PROFES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58105/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d937ecbe29588d6bbee990507c8485
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at test.java.ua.ukrnet.page.MainPage.clickOnLogo(MainPage.java:172)
+	at test.java.ua.ukrnet.context.MainPageContext.navigateByClickingLogo(MainPageContext.java:105)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateFromLogoToMainPage(MainPageMailPanelTests.java:99)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigateUponClickCannotLogIn">
+                  </a> <!-- navigateUponClickCannotLogIn -->
+                  <span class="method-name">navigateUponClickCannotLogIn</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;РќРµ РІРґР°С”С‚СЊСЃСЏ СѓРІС–Р№С‚Рё?&apos;]&quot;}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;USER-PC&apos;, ip: &apos;172.18.176.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73d937ecbe29588d6bbee990507c8485, findElement {using=xpath, value=//*[text()=&apos;РќРµ РІРґР°С”С‚СЊСЃСЏ СѓРІС–Р№С‚Рё?&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PROFES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58105/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d937ecbe29588d6bbee990507c8485
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at test.java.ua.ukrnet.page.MainPage.clickOnCannotLogInLink(MainPage.java:230)
+	at test.java.ua.ukrnet.context.MainPageContext.getTextFromCannotLogInTitle(MainPageContext.java:149)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateUponClickCannotLogIn(MainPageMailPanelTests.java:132)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigateUponClickCreateEmail">
+                  </a> <!-- navigateUponClickCreateEmail -->
+                  <span class="method-name">navigateUponClickCreateEmail</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()=&apos;РЎС‚РІРѕСЂРёС‚Рё СЃРєСЂРёРЅСЊРєСѓ&apos;]&quot;}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;USER-PC&apos;, ip: &apos;172.18.176.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73d937ecbe29588d6bbee990507c8485, findElement {using=xpath, value=//*[text()=&apos;РЎС‚РІРѕСЂРёС‚Рё СЃРєСЂРёРЅСЊРєСѓ&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PROFES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58105/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d937ecbe29588d6bbee990507c8485
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at test.java.ua.ukrnet.page.MainPage.clickEmailLink(MainPage.java:197)
+	at test.java.ua.ukrnet.context.MainPageContext.getTextFromEmailTitle(MainPageContext.java:132)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateUponClickCreateEmail(MainPageMailPanelTests.java:120)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 41 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigateUponClickEmailLink">
+                  </a> <!-- navigateUponClickEmailLink -->
+                  <span class="method-name">navigateUponClickEmailLink</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+Expected: &quot;РџРѕС€С‚Р°&quot;
+     but: was &quot;Пошта&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateUponClickEmailLink(MainPageMailPanelTests.java:143)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Main_Page-class-failed -->
+          <div class="suite-Main_Page-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.java.ua.ukrnet.test.MainPageMailPanelTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkValidationMaxCharacters">
+                  </a> <!-- checkValidationMaxCharacters -->
+                  <span class="method-name">checkValidationMaxCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logOut">
+                  </a> <!-- logOut -->
+                  <span class="method-name">logOut</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginEmail">
+                  </a> <!-- loginEmail -->
+                  <span class="method-name">loginEmail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Main_Page-class-passed -->
+        </div> <!-- panel Main_Page -->
+        <div panel-name="test-xml-Main_Page" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\Professional\Desktop\UkrNet\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Main Page&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Group of main page&quot; verbose=&quot;0&quot;&gt;
+    &lt;groups&gt;
+      &lt;define name=&quot;include-group&quot;&gt;
+        &lt;include name=&quot;mail-panel&quot;/&gt;
+      &lt;/define&gt; &lt;!-- include-group --&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;mail-panel&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;test.java.ua.ukrnet.test.MainPageMailPanelTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Group of main page --&gt;
+&lt;/suite&gt; &lt;!-- Main Page --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Main_Page" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Main Page</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Group of main page (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Main_Page" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Main Page</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">mail-panel</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkValidationMaxCharacters</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">leaveEmptyFields</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">leaveEmptyLoginField</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">leaveEmptyPasswordField</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">logOut</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginByInvalidEmail</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginByInvalidPassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginEmail</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">navigateFromLogoToMainPage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">navigateUponClickCannotLogIn</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">navigateUponClickCreateEmail</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">navigateUponClickEmailLink</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Main_Page" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Main Page</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Main_Page');
+function tableData_Main_Page() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(12);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'loginByInvalidEmail')
+data.setCell(0, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(0, 3, 10552);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'navigateUponClickCreateEmail')
+data.setCell(1, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(1, 3, 10218);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'navigateUponClickCannotLogIn')
+data.setCell(2, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(2, 3, 10127);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'navigateFromLogoToMainPage')
+data.setCell(3, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(3, 3, 10053);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'logOut')
+data.setCell(4, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(4, 3, 2655);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'navigateUponClickEmailLink')
+data.setCell(5, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(5, 3, 1056);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'loginEmail')
+data.setCell(6, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(6, 3, 977);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'leaveEmptyFields')
+data.setCell(7, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(7, 3, 936);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'leaveEmptyPasswordField')
+data.setCell(8, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(8, 3, 864);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'loginByInvalidPassword')
+data.setCell(9, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(9, 3, 621);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'leaveEmptyLoginField')
+data.setCell(10, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(10, 3, 443);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'checkValidationMaxCharacters')
+data.setCell(11, 2, 'test.java.ua.ukrnet.test.MainPageMailPanelTests')
+data.setCell(11, 3, 308);
+window.suiteTableData['Main_Page']= { tableData: data, tableDiv: 'times-div-Main_Page'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 48 seconds</span>
+              <div id="times-div-Main_Page">
+              </div> <!-- times-div-Main_Page -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Main_Page" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Main Page</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Main_Page" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Main_Page" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.java.ua.ukrnet.test.MainPageMailPanelTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">6491 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">leaveEmptyFields</span>
+                <span class="method-start">8679 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">9624 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">leaveEmptyLoginField</span>
+                <span class="method-start">17633 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">18077 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">leaveEmptyPasswordField</span>
+                <span class="method-start">20260 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">21125 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">navigateFromLogoToMainPage</span>
+                <span class="method-start">23364 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">33423 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkValidationMaxCharacters</span>
+                <span class="method-start">36458 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">36767 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">navigateUponClickCreateEmail</span>
+                <span class="method-start">39052 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">49272 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">navigateUponClickCannotLogIn</span>
+                <span class="method-start">51282 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">61410 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">navigateUponClickEmailLink</span>
+                <span class="method-start">64701 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">65758 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginByInvalidEmail</span>
+                <span class="method-start">67795 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">78348 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginByInvalidPassword</span>
+                <span class="method-start">80912 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">81534 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">logOut</span>
+                <span class="method-start">83678 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">precondition</span>
+                <span class="method-start">86333 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginEmail</span>
+                <span class="method-start">88667 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">89645 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

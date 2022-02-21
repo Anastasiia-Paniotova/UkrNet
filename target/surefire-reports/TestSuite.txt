@@ -1,0 +1,168 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 90.453 sec <<< FAILURE!
+leaveEmptyFields(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 0.942 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: a string containing "ĞŸĞ¾Ğ»Ñ Ğ¼Ğ°ÑÑ‚ÑŒ Ğ±ÑƒÑ‚Ğ¸ Ğ·Ğ°Ğ¿Ğ¾Ğ²Ğ½ĞµĞ½Ñ–"
+     but: was "Ïîëÿ ìàşòü áóòè çàïîâíåí³"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.leaveEmptyFields(MainPageMailPanelTests.java:65)
+
+leaveEmptyLoginField(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 0.444 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: a string containing "ĞŸĞ¾Ğ»Ğµ Ğ¼Ğ°Ñ” Ğ±ÑƒÑ‚Ğ¸ Ğ·Ğ°Ğ¿Ğ¾Ğ²Ğ½ĞµĞ½Ğµ"
+     but: was "Ïîëå ìàº áóòè çàïîâíåíå"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.leaveEmptyLoginField(MainPageMailPanelTests.java:78)
+
+leaveEmptyPasswordField(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 0.865 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: a string containing "ĞŸĞ¾Ğ»Ğµ Ğ¼Ğ°Ñ” Ğ±ÑƒÑ‚Ğ¸ Ğ·Ğ°Ğ¿Ğ¾Ğ²Ğ½ĞµĞ½Ğµ"
+     but: was "Ïîëå ìàº áóòè çàïîâíåíå"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.leaveEmptyPasswordField(MainPageMailPanelTests.java:91)
+
+navigateFromLogoToMainPage(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 10.059 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='Ğ½Ğ¾Ğ²Ğ¸Ğ½Ğ¸']"}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'USER-PC', ip: '172.18.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73d937ecbe29588d6bbee990507c8485, findElement {using=xpath, value=//img[@alt='Ğ½Ğ¾Ğ²Ğ¸Ğ½Ğ¸']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PROFES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58105/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d937ecbe29588d6bbee990507c8485
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at test.java.ua.ukrnet.page.MainPage.clickOnLogo(MainPage.java:172)
+	at test.java.ua.ukrnet.context.MainPageContext.navigateByClickingLogo(MainPageContext.java:105)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateFromLogoToMainPage(MainPageMailPanelTests.java:99)
+
+navigateUponClickCreateEmail(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 10.22 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Ğ¡Ñ‚Ğ²Ğ¾Ñ€Ğ¸Ñ‚Ğ¸ ÑĞºÑ€Ğ¸Ğ½ÑŒĞºÑƒ']"}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'USER-PC', ip: '172.18.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73d937ecbe29588d6bbee990507c8485, findElement {using=xpath, value=//*[text()='Ğ¡Ñ‚Ğ²Ğ¾Ñ€Ğ¸Ñ‚Ğ¸ ÑĞºÑ€Ğ¸Ğ½ÑŒĞºÑƒ']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PROFES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58105/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d937ecbe29588d6bbee990507c8485
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at test.java.ua.ukrnet.page.MainPage.clickEmailLink(MainPage.java:197)
+	at test.java.ua.ukrnet.context.MainPageContext.getTextFromEmailTitle(MainPageContext.java:132)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateUponClickCreateEmail(MainPageMailPanelTests.java:120)
+
+navigateUponClickCannotLogIn(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 10.128 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='ĞĞµ Ğ²Ğ´Ğ°Ñ”Ñ‚ÑŒÑÑ ÑƒĞ²Ñ–Ğ¹Ñ‚Ğ¸?']"}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'USER-PC', ip: '172.18.176.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73d937ecbe29588d6bbee990507c8485, findElement {using=xpath, value=//*[text()='ĞĞµ Ğ²Ğ´Ğ°Ñ”Ñ‚ÑŒÑÑ ÑƒĞ²Ñ–Ğ¹Ñ‚Ğ¸?']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\PROFES~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58105}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58105/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d937ecbe29588d6bbee990507c8485
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at test.java.ua.ukrnet.page.MainPage.clickOnCannotLogInLink(MainPage.java:230)
+	at test.java.ua.ukrnet.context.MainPageContext.getTextFromCannotLogInTitle(MainPageContext.java:149)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateUponClickCannotLogIn(MainPageMailPanelTests.java:132)
+
+navigateUponClickEmailLink(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 1.057 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: "ĞŸĞ¾ÑˆÑ‚Ğ°"
+     but: was "Ïîøòà"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.navigateUponClickEmailLink(MainPageMailPanelTests.java:143)
+
+loginByInvalidEmail(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 10.552 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@class='form__error form__error_wrong form__error_visible'] (tried for 5 second(s) with 500 milliseconds interval)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:174)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at test.java.ua.ukrnet.page.MainPage.getTextErrorMessage(MainPage.java:115)
+	at test.java.ua.ukrnet.context.MainPageContext.getTextInvalidEmail(MainPageContext.java:46)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.loginByInvalidEmail(MainPageMailPanelTests.java:44)
+
+loginByInvalidPassword(test.java.ua.ukrnet.test.MainPageMailPanelTests)  Time elapsed: 0.622 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: a string containing "ĞĞµĞ¿Ñ€Ğ°Ğ²Ğ¸Ğ»ÑŒĞ½Ñ– Ğ´Ğ°Ğ½Ñ–"
+     but: was "Íåïğàâèëüí³ äàí³"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at test.java.ua.ukrnet.test.MainPageMailPanelTests.loginByInvalidPassword(MainPageMailPanelTests.java:55)
+

@@ -1,10 +1,10 @@
-test\java\ua\ukrnet\configuration\DataProperties.class
-test\java\ua\ukrnet\page\MainPage.class
 test\java\ua\ukrnet\context\MainPageContext.class
 test\java\ua\ukrnet\page\MsgListPage.class
+test\java\ua\ukrnet\configuration\ConfProperties.class
+test\java\ua\ukrnet\page\BasePage.class
+test\java\ua\ukrnet\configuration\DataProperties.class
+test\java\ua\ukrnet\page\MainPage.class
 test\java\ua\ukrnet\test\BaseTest.class
 test\java\ua\ukrnet\test\MsgListPageTests.class
 test\java\ua\ukrnet\test\MainPageMailPanelTests.class
 test\java\ua\ukrnet\context\MsgListPageContext.class
-test\java\ua\ukrnet\configuration\ConfProperties.class
-test\java\ua\ukrnet\page\BasePage.class

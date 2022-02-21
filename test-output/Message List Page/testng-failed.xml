@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Message List Page]">
+  <test thread-count="5" name="Group of Message List Page(failed)">
+    <groups>
+      <run>
+        <include name="msg-list"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.java.ua.ukrnet.test.MsgListPageTests">
+        <methods>
+          <include name="sendLetterWithoutSubject"/>
+          <include name="sendTheLetterAndVerify"/>
+          <include name="openMsgListPage"/>
+          <include name="setUpLogin"/>
+          <include name="checkURL"/>
+          <include name="tearDown"/>
+          <include name="isDisabledHeaderOptionsByDefault"/>
+          <include name="isEnabledHeaderOptions"/>
+          <include name="getAlertSendTheLetterWithoutRecipient"/>
+          <include name="setup"/>
+          <include name="sendLetterWithoutRecipient"/>
+          <include name="checkRightSideComponents"/>
+          <include name="checkComponents"/>
+          <include name="cancelTheLetter"/>
+        </methods>
+      </class> <!-- test.java.ua.ukrnet.test.MsgListPageTests -->
+    </classes>
+  </test> <!-- Group of Message List Page(failed) -->
+</suite> <!-- Failed suite [Message List Page] -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Main Page]" verbose="0">
+  <test thread-count="5" name="Group of main page(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="mail-panel"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.java.ua.ukrnet.test.MainPageMailPanelTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="leaveEmptyPasswordField"/>
+          <include name="precondition"/>
+          <include name="leaveEmptyLoginField"/>
+          <include name="setup"/>
+          <include name="navigateUponClickCannotLogIn"/>
+          <include name="loginByInvalidPassword"/>
+          <include name="navigateFromLogoToMainPage"/>
+          <include name="navigateUponClickEmailLink"/>
+          <include name="navigateUponClickCreateEmail"/>
+          <include name="loginByInvalidEmail"/>
+          <include name="leaveEmptyFields"/>
+        </methods>
+      </class> <!-- test.java.ua.ukrnet.test.MainPageMailPanelTests -->
+    </classes>
+  </test> <!-- Group of main page(failed) -->
+</suite> <!-- Failed suite [Main Page] -->
